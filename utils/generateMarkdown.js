@@ -64,23 +64,29 @@ function generateMarkdown(data) {
 
   let license = renderLicenseSection(data.licenseType, data.username);
 
+  // Must be unindented one level to format correctly for some reason
   let markdown = `
-  # [${data.projectTitle}]${(data.liveLink) ? '(' + data.liveLink + ')' : ''}
+# [${data.projectTitle}]${(data.liveLink) ? '(' + data.liveLink + ')' : ''}
 
-  ${data.description}
+${data.description}
 
-  ## Table of Contents
+## Table of Contents
+   
+* [Installation Instructions](#installation-instructions)
+* [Testing Instructions](#testing-instructions)
+* [Contribution Guidelines](#contribution-guidelines)
+* [License](#license)
 
-  ## Installation Instructions
+## Installation Instructions
   
-  ## Testing Instructions
+## Testing Instructions
 
-  ## Contribution Guidelines
+## Contribution Guidelines
 
-  ## License
+## License
 
-  ${license}
-  `;
+${license}
+`;
 
   return markdown;
 }

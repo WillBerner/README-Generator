@@ -7,7 +7,7 @@ const fs = require("fs");
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (error) => {
-        (error) ? log.error(error) : console.log("Succes");
+        (error) ? log.error(error) : console.log("Success");
     })
 }
 
@@ -22,7 +22,7 @@ async function init() {
     })
     .catch(error => console.log(error));
 
-    writeToFile("testMarkdown.md",markdown);
+    writeToFile("testMarkdown2.md",markdown);
     
 }
 

@@ -1,17 +1,22 @@
 
-  # [Trailr](https://github.com/WillBerner/Will-Berner)
+# [Trailr](https://github.com/WillBerner/Will-Berner)
 
-  Trailr is a web application for searching for movies!
+Trailr is a web application for searching for movies!
 
-  ## Table of Contents
+## Table of Contents
+    
+* [Installation Instructions](#installation-instructions)
+* [Testing Instructions](#testing-instructions)
+* [Contribution Guidelines](#contribution-guidelines)
+* [License](#license)
 
-  ## Installation Instructions
+## Installation Instructions
   
-  ## Testing Instructions
+## Testing Instructions
 
-  ## Contribution Guidelines
+## Contribution Guidelines
 
-  ## License
+## License
 
   MIT License
 
