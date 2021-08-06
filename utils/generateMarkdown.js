@@ -64,28 +64,49 @@ function generateMarkdown(data) {
 
   let license = renderLicenseSection(data.licenseType, data.username);
 
+  let title = `[${data.projectTitle}]${(data.liveLink) ? '(' + data.liveLink + ')' : ''}`;
+
   // Must be unindented one level to format correctly for some reason
   let markdown = `
-# [${data.projectTitle}]${(data.liveLink) ? '(' + data.liveLink + ')' : ''}
+# ${title}
 
 ${data.description}
 
 ## Table of Contents
    
 * [Installation Instructions](#installation-instructions)
+* [Usage Instructions](#usage-instructions)
 * [Testing Instructions](#testing-instructions)
 * [Contribution Guidelines](#contribution-guidelines)
+* [Questions](#questions)
 * [License](#license)
 
 ## Installation Instructions
+
+${data.installationInstructions}
   
+## Usage Instructions
+
+${data.usageInstructions}
+
 ## Testing Instructions
 
+${data.testInstructions}
+
 ## Contribution Guidelines
+
+${data.contributionGuidelines}
+
+## Questions
+
+If you have any questions about this software, please reach out to me on either my github on via email!
+
+[![GitHub](/icons/GitHub.png)](https://www.github.com/${data.github}) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [![Email](/icons/Email.png)](mailto:${data.email}) 
 
 ## License
 
 ${license}
+
 `;
 
   return markdown;
