@@ -12,16 +12,17 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
-function init() {
+async function init() {
 
-    inquirer.prompt(questions)
+    let markdown = '';
+
+    await inquirer.prompt(questions)
     .then(data => {
-        console.log(data);
-        console.log(generateMarkdown(data));
+        markdown = generateMarkdown(data);
     })
     .catch(error => console.log(error));
 
-    // console.log(generateMarkdown({title:"test"}));
+    writeToFile("testMarkdown.md",markdown);
     
 }
 
