@@ -22,7 +22,7 @@ async function init() {
     })
     .catch(error => console.log(error));
 
-    writeToFile("testMarkdown2.md",markdown);
+    writeToFile("./dist/testMarkdown2.md", markdown);
     
 }
 
