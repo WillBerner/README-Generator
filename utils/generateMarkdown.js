@@ -66,9 +66,26 @@ function generateMarkdown(data) {
 
   let title = `[${data.projectTitle}]${(data.liveLink) ? '(' + data.liveLink + ')' : ''}`;
 
+  let licenseIcon = '';
+  switch(data.licenseType) {
+    case "MIT License":
+      licenseIcon = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`;
+      break;
+    case "BSD 2-Clause License":
+      licenseIcon = `[![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)`;
+      break;
+    case "Boost Software License 1.0":
+      licenseIcon = `[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)`;
+      break;
+    default:
+      licenseIcon = '';
+  }
+
+
   // Must be unindented one level to format correctly for some reason
   let markdown = `
 # ${title}
+${licenseIcon}
 
 ${data.description}
 
