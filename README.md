@@ -15,5 +15,7 @@ Built With
 * Inquirer
 * File System (Node.js)
 
+## Demo
+[![Demo](https://img.youtube.com/vi/s9yJYPAFIeI/0.jpg)](https://www.youtube.com/watch?v=s9yJYPAFIeI)
 
 &copy; 2021 [Will](https://github.com/WillBerner)
